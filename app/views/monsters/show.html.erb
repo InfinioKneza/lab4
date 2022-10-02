@@ -9,9 +9,9 @@
     <div class="col-sm">
     <% Tweet.all.each do |tweet| %>
         <% if tweet.monster_id == @monster.id %>
-        <p> Tweet: <%= tweet.content %> </p>
+            <p> Tweet: <%= tweet.content %> </p>
         <% end %>
-    <% end %>
+    <% end %>  
     </div>
     </div> 
 </div>   
