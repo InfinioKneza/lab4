@@ -1,1 +1,17 @@
-<%# Update me %><%= @monster.inspect %>
+<h1> <%= @monster.name %> </h1>
+<div class="container">
+    <div class="row">
+     <div class="col-sm">
+        <%= @monster.description %>
+        <br> </br>
+        <%= button_to 'Eliminar', @monster , method: :delete %>
+    </div>
+    <div class="col-sm">
+    <% Tweet.all.each do |tweet| %>
+        <% if tweet.monster_id == @monster.id %>
+        <p> Tweet: <%= tweet.content %> </p>
+        <% end %>
+    <% end %>
+    </div>
+    </div> 
+</div>   
